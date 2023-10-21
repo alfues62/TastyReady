@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "138535265217",
+    "project_id": "tastyandready-ca2cd",
+    "storage_bucket": "tastyandready-ca2cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138535265217:android:6bc529d2abc8498364c540",
+        "android_client_info": {
+          "package_name": "com.example.afusesc.tastyready"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjhtE_8Y06zoJvprNTGbPmGrjLcN1q95Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
