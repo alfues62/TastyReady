@@ -2,12 +2,14 @@ package com.example.afusesc.tastyready;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         //Pestañas
         ViewPager2 viewPager = findViewById(R.id.viewpager);
         viewPager.setAdapter(new MiPagerAdapter(this));
@@ -41,11 +47,15 @@ public class MainActivity extends AppCompatActivity {
                     public void onConfigureTab(@NonNull TabLayout.Tab tab, int position){
                         tab.setText(nombres[position]);
                         tab.setIcon(drawables[position]);
-
                     }
                 }
         ).attach();
 
+    }
+
+    @Override public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true; /** true -> el menú ya está visible */
     }
 
     public class MiPagerAdapter extends FragmentStateAdapter {
